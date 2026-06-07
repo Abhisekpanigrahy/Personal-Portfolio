@@ -41,7 +41,7 @@ export default function Loader() {
       {/* Radial glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full"
-          style={{ background: "radial-gradient(circle,rgba(124,58,237,0.14) 0%,transparent 70%)" }}
+          style={{ background: "radial-gradient(circle,rgba(124,58,237,0.14) 0%,rgba(6,6,15,0) 70%)" }}
         />
       </div>
 

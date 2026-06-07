@@ -68,8 +68,8 @@ export default function Hero() {
       {/* Background */}
       <div className="absolute inset-0 transition-colors duration-400"
         style={{ background: isDark
-          ? "radial-gradient(ellipse at 62% 50%,rgba(124,58,237,0.13) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(0,255,255,0.06) 0%,transparent 50%),#06060f"
-          : "radial-gradient(ellipse at 62% 50%,rgba(124,58,237,0.07) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(8,145,178,0.05) 0%,transparent 50%),#f5f5fa"
+          ? `radial-gradient(ellipse at 62% 50%,rgba(124,58,237,0.13) 0%,rgba(6,6,15,0) 60%),radial-gradient(ellipse at 20% 80%,rgba(0,255,255,0.06) 0%,rgba(6,6,15,0) 50%),#06060f`
+          : `radial-gradient(ellipse at 62% 50%,rgba(124,58,237,0.07) 0%,rgba(245,245,250,0) 60%),radial-gradient(ellipse at 20% 80%,rgba(8,145,178,0.05) 0%,rgba(245,245,250,0) 50%),#f5f5fa`
         }}
       />
 
@@ -86,7 +86,7 @@ export default function Hero() {
 
       {/* 3D Canvas */}
       <motion.div
-        className="absolute right-0 top-0 w-full lg:w-[55%] h-full"
+        className="absolute right-0 top-0 w-full lg:w-[55%] h-full overflow-hidden pointer-events-none"
         style={{ opacity }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -98,8 +98,8 @@ export default function Hero() {
       {/* Gradient fade — canvas into bg (stronger on mobile to hide canvas behind text) */}
       <div className="absolute inset-0 pointer-events-none"
         style={{ background: isDark
-          ? "linear-gradient(90deg,#06060f 35%,rgba(6,6,15,0.6) 60%,transparent 100%)"
-          : "linear-gradient(90deg,#f5f5fa 35%,rgba(245,245,250,0.6) 60%,transparent 100%)"
+          ? "linear-gradient(90deg,#06060f 35%,rgba(6,6,15,0.8) 60%,rgba(6,6,15,0) 100%)"
+          : "linear-gradient(90deg,#f5f5fa 35%,rgba(245,245,250,0.8) 60%,rgba(245,245,250,0) 100%)"
         }}
       />
       {/* Extra mobile overlay — ensures no white bleed on small screens */}
@@ -259,7 +259,7 @@ export default function Hero() {
             className="flex gap-8 mt-14 pt-8"
             style={{ borderTop: "1px solid var(--border-subtle)" }}
           >
-            {[{ value: "2+", label: "Years Exp." }, { value: "8+", label: "Projects" }, { value: "6+", label: "Clients" }].map(({ value, label }) => (
+            {[{ value: "2+", label: "Years Exp." }, { value: "7+", label: "Projects" }, { value: "6+", label: "Clients" }].map(({ value, label }) => (
               <div key={label}>
                 <div className="gradient-stat font-display font-bold text-2xl">
                   {value}

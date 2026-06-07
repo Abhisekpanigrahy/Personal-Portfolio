@@ -120,7 +120,7 @@ function MouseParallax() {
 
 function CSSFallback({ isDark }: { isDark: boolean }) {
   return (
-    <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+    <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none bg-transparent">
       {[0, 1, 2, 3].map((i) => (
         <motion.div
           key={i}
@@ -131,6 +131,7 @@ function CSSFallback({ isDark }: { isDark: boolean }) {
             border: `1px solid ${i % 2 === 0
               ? isDark ? "rgba(124,58,237,0.3)" : "rgba(109,40,217,0.25)"
               : isDark ? "rgba(0,255,255,0.2)" : "rgba(8,145,178,0.2)"}`,
+            background: "transparent",
           }}
           animate={{ rotate: i % 2 === 0 ? 360 : -360 }}
           transition={{ duration: 8 + i * 4, repeat: Infinity, ease: "linear" }}

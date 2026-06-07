@@ -27,15 +27,17 @@ export default function About() {
   const violet = isDark ? "#7c3aed" : "#6d28d9";
   const cyan   = isDark ? "#00ffff" : "#0891b2";
 
+  const bgColor = isDark ? "rgba(6,6,15,0)" : "rgba(245,245,250,0)";
+
   return (
     <section id="about" ref={ref} className="py-32 relative overflow-hidden" data-testid="about-section">
       {/* Parallax bg blobs */}
       <motion.div className="absolute inset-0 pointer-events-none" style={{ y: bgY }}>
         <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full"
-          style={{ background: `radial-gradient(circle,${isDark ? "rgba(124,58,237,0.1)" : "rgba(124,58,237,0.05)"},transparent)` }}
+          style={{ background: `radial-gradient(circle,${isDark ? "rgba(124,58,237,0.1)" : "rgba(124,58,237,0.05)"},${bgColor})` }}
         />
         <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] rounded-full"
-          style={{ background: `radial-gradient(circle,${isDark ? "rgba(0,255,255,0.07)" : "rgba(8,145,178,0.05)"},transparent)` }}
+          style={{ background: `radial-gradient(circle,${isDark ? "rgba(0,255,255,0.07)" : "rgba(8,145,178,0.05)"},${bgColor})` }}
         />
       </motion.div>
 

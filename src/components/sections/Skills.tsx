@@ -98,11 +98,13 @@ export default function Skills() {
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
+  const bgColor = isDark ? "rgba(6,6,15,0)" : "rgba(245,245,250,0)";
+
   return (
     <section id="skills" ref={ref} className="py-32 relative overflow-hidden" data-testid="skills-section">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px]"
-          style={{ background: `radial-gradient(ellipse,${isDark ? "rgba(124,58,237,0.06)" : "rgba(124,58,237,0.03)"},transparent)` }}
+          style={{ background: `radial-gradient(ellipse,${isDark ? "rgba(124,58,237,0.06)" : "rgba(124,58,237,0.03)"},${bgColor})` }}
         />
       </div>
 
@@ -144,7 +146,7 @@ export default function Skills() {
               }}
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none"
-                style={{ background: `radial-gradient(ellipse at top left,${cat.color}08,transparent 60%)` }}
+                style={{ background: `radial-gradient(ellipse at top left,${cat.color}08,${cat.color}00 60%)` }}
               />
               <div className="flex items-center gap-3 mb-6 pb-4"
                 style={{ borderBottom: `1px solid ${cat.color}18` }}
