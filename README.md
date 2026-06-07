@@ -91,8 +91,4 @@ Feel free to reach out if you have any questions or want to collaborate!
 
 ---
 
-## 📜 License
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
 Developed with ❤️ by **Abhisek Panigrahy**
